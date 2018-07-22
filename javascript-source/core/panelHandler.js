@@ -44,7 +44,7 @@
 	function saveObject(table, key, object) {
 		$.inidb.set(table, key, JSON.stringify(object, function(key, value) {
 			try {
-				if (value.getClass() !== null) {
+				if (typeof(value) !== null) {
 					switch (value) {
 						case value instanceof java.lang.Number:
 							return parseInt(value);

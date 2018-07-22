@@ -214,6 +214,8 @@ public class HTTPServerCommon {
                 handleFile("/web/index.html", exchange, hasPassword, false);
             } else if (uriPath.equals("/alerts")) {
                 handleFile("/web/alerts/index.html", exchange, hasPassword, false);
+            } else if (uriPath.equals("/dungeon")) {
+                handleFile("/web/dungeon/index.html", exchange, hasPassword, false);
             } else if (uriPath.startsWith("/config/audio-hooks")) {
                 handleFile(uriPath, exchange, hasPassword, false);
             } else if (uriPath.startsWith("/config/gif-alerts")) {

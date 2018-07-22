@@ -818,6 +818,12 @@ public class PanelSocketServer extends WebSocketServer {
         sendToAll(jsonObject.toString());
     }
 
+    public void updateDungeon(String message) {
+        JSONStringer jsonObject = new JSONStringer();
+        jsonObject.object().key("battleInfo").value(message).endObject();
+        sendToAll(jsonObject.toString());
+    }
+
     /**
      * Executes an event directly.
      *

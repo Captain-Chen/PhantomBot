@@ -849,6 +849,12 @@ public class NewPanelSocketServer {
         sendToAll(jsonObject.toString());
     }
 
+    public void updateDungeon(Object[] message){
+        JSONStringer jsonObject = new JSONStringer();
+        jsonObject.object().key("battleInfo").value(message).endObject();
+    sendToAll(jsonObject.toString());
+    }
+
     /**
      * Executes an event directly.
      *
